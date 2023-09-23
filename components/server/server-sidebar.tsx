@@ -8,9 +8,9 @@ import { currentProfile } from '@/lib/current-profile';
 import { db } from '@/lib/db';
 
 import { ServerHeader } from './server-header';
-// import { ServerSection } from './server-section';
-// import { ServerChannel } from './server-channel';
-// import { ServerMember } from './server-member';
+import { ServerSection } from './server-section';
+import { ServerChannel } from './server-channel';
+import { ServerMember } from './server-member';
 import { ServerSearch } from './server-search';
 
 interface ServerSidebarProps {
@@ -115,7 +115,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
           />
         </div>
         <Separator className='bg-zinc-200 dark:bg-zinc-700 rounded-md my-2' />
-        {/* {!!textChannels?.length && (
+        {!!textChannels?.length && (
           <div className='mb-2'>
             <ServerSection sectionType='channels' channelType={ChannelType.TEXT} role={role} label='Text Channels' />
             <div className='space-y-[2px]'>
@@ -154,7 +154,7 @@ export const ServerSidebar = async ({ serverId }: ServerSidebarProps) => {
               ))}
             </div>
           </div>
-        )} */}
+        )}
       </ScrollArea>
     </div>
   );
